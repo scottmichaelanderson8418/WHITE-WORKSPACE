@@ -1,0 +1,58 @@
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>List of Registered Users</title>
+</head>
+<style>
+	body {
+	  font-family: sans-serif; /* Use a generic sans-serif font for a clean look */
+	  margin: 20px; /* Add some margin around the page content */
+
+	}
+
+	.student-list-title {
+	  text-align: center; /* Center the title */
+	  margin-bottom: 20px; /* Add some space below the title */
+	  font-size: 1.5em;  /* Increase title font size slightly */
+	  color: #333; /* Set title text color */
+	}
+
+	.student-list-table {
+	  border-collapse: collapse; /* Remove default table border spacing */
+	  width: 100%; /* Make the table fill the available width */
+	}
+
+	th, td , tbody{
+	  padding: 10px;  /* Add padding to table cells for better readability */
+border: 2px solid #365930;
+	}
+
+	th {
+	  background-color: rgb(122, 236, 111); /* Set a light background color for table headers */
+	  color: #333; /* Set header text color */
+	}
+</style>
+<body>
+    <h1>List of Students</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+				<th>Age</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="myUser : ${myUsersList}">
+                <td th:text="${myUser.id}"></td>
+                <td th:text="${myUser.username}"></td>
+                <td th:text="${myUser.password}"></td>   
+				<td th:text="${myUser.role}"></td>   
+            </tr>
+        </tbody>
+    </table>   
+
+</body>
+</html>

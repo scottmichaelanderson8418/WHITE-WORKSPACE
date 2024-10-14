@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<meta charset="ISO-8859-1" />
+	<title>Index</title>
+	<link rel="stylesheet" href="registerStyle.css">
+</head>
+<style>
+	
+	body {
+		display: block;
+		text-align: center;
+		position: relative;
+		margin-left: auto;
+		margin-right: auto;
+		font-size: large;
+		font-style: bold;
+		color: #04aa6d;
+		font-size: 15px;
+	}
+
+
+
+
+	div.form-container {
+		background-color: white;
+		border:solid 5px  green;
+		border-radius: 15px;
+		color: green;
+		padding: 20px 35px;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 1.5rem;
+
+		margin: 20px;
+		box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.5);
+		max-width: 600px;
+		width:100%;
+		height: auto;
+		
+	}
+	
+	 div.scottButton button{
+		background-color: white;
+		border:solid 5px  green;
+		border-radius: 15px;
+		color: green;
+		padding: 20px 35px;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 1.5rem;
+
+		margin: 20px;
+		box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.5);
+		max-width: 600px;
+		width:100%;
+		height: auto;
+		
+	}
+
+
+
+
+
+
+	span {
+		display: inline-block;
+	}
+
+	h2 {
+		display: inline-block;
+	}
+</style>
+
+<body>
+	
+	
+	<div class="form-container">
+	<h1>Welcome New User!!  You are saved to our database</h1>
+	<form action="/" method="post">
+		<div>
+			<span>
+				<h2>Username:&nbsp</h2>
+				<h2 th:text="${username}">username</h2>
+			</span>
+		</div>
+		<div>
+		<span>
+			<h2>DOB: &nbsp</h2>
+
+			<h2 th:date="${dob}">dob</h2>
+		</span>
+		</div>
+		<div>
+			<span>
+				<h2>Password: &nbsp</h2>
+
+				<h2 th:password="${password}">password</h2>
+			</span>
+		</div>
+		<div>
+			<span>
+				<h2>Gender: &nbsp</h2>
+
+				<h2 th:text="${gender}">gender</h2>
+			</span>
+		</div>
+		<div>
+			<span>
+				<h2>Email: &nbsp</h2>
+
+				<h2 th:text="${email}">email</h2>
+			</span>
+		</div>
+		<div>
+			<span>
+				<h2>Email: &nbsp</h2>
+
+				<h2 th:text="${role}">role</h2>
+			</span>
+		</div>
+		
+	
+		<div class="scottButton">
+			<button type="submit">Return to home page index</button>
+			</div>
+	</form>
+	
+	
+	</div>
+	
+	
+
+</body>
+
+</html>
+
+
+

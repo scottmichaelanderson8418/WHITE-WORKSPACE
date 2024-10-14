@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta charset="ISO-8859-1" />
+		<title>Index</title>
+		
+		<link rel="stylesheet" href="registerStyle.css">
+	</head>
+	<style>
+		
+		body {
+			display: block;
+			text-align: center;
+			position: relative;
+			margin-left: auto;
+			margin-right: auto;
+			font-size: large;
+			font-style: bold;
+			color: #04aa6d;
+			font-size: 15px;
+		}
+		
+		.buttons >p>a{
+			background-color: #04aa6d;
+			/* Green */
+			border: none;
+			color: white;
+			padding:20px 35px;
+			text-align: center;
+			text-decoration: none;
+			display: inline-block;
+			font-size: 1.5rem;
+			border-radius: 5px;
+			margin: 20px;
+			width: 400px;
+			height: auto;
+		}
+
+		.pagination {
+			display: inline-block;
+		}
+
+		.pagination a {
+			color: black;
+			float: left;
+			padding: 8px 16px;
+			text-decoration: none;
+		}
+
+
+	</style>
+
+	<body>
+		<h1>Print Drawing Search Web API</h1>
+
+		
+		<div class="buttons">
+			<p><a th:href="@{/login}">Login</a></p>
+		</div>
+
+		<div class="buttons">
+			<p><a th:href="@{/register}">Create New User</a></p>
+		</div>
+
+		<div class="buttons">
+			<p><a th:href="@{/userList}">View User Database</a></p>
+		</div>
+
+		<div class="buttons">
+		<p>	<a th:href="@{/updateprint}">View Print Database</a></p>
+		</div>
+	</body>
+</html>
+
+

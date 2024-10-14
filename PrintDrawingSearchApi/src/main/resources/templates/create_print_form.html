@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta charset="ISO-8859-1" />
+		<title>Enter Drawing Details</title>
+		<link rel="stylesheet" href="registerStyle.css" />
+		<style>
+			.form-group {
+				display: flex;
+				align-items: center;
+				margin-bottom: 10px;
+			}
+
+			.form-group label {
+				width: 150px; /* Adjust this width based on the longest label */
+				margin-right: 10px;
+				text-align: right;
+			}
+
+			.form-group input,
+			.form-group select {
+				flex: 1;
+				text-align: left;
+				width: 90%;
+				height: auto;
+				padding: 10px;
+				margin-bottom: 15px;
+				border: 5px solid #ccc;
+				border-radius: 3px;
+				font-size: 1.3rem;
+			}
+
+			button {
+				margin-top: 20px;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>Enter Drawing Details</h1>
+		<form action="/register" th:object="${printDrawingDto}" method="post">
+			<div class="form-group">
+				<label for="bearingMax">Bearing Max:</label>
+				<input type="text" name="bearingMax" th:field="*{bearingMax}" />
+			</div>
+
+			<div class="form-group">
+				<label for="bearingMin">Bearing Min:</label>
+				<input type="text" name="bearingMin" th:field="*{bearingMin}" />
+			</div>
+
+			<div class="form-group">
+				<label for="customer">Customer:</label>
+				<input type="text" name="customer" th:field="*{customer}" />
+			</div>
+
+			<div class="form-group">
+				<label for="customerPin">Customer Pin:</label>
+				<input type="text" name="customerPin" th:field="*{customerPin}" />
+			</div>
+
+			<div class="form-group">
+				<label for="customerRevision">Customer Revision:</label>
+				<input type="text" name="customerRevision" th:field="*{customerRevision}" />
+			</div>
+
+			<div class="form-group">
+				<label for="date">Date:</label>
+				<input type="date" name="date" th:field="*{date}" />
+			</div>
+
+			<div class="form-group">
+				<label for="dateCreated">Date Created:</label>
+				<input type="date" name="dateCreated" th:field="*{dateCreated}" />
+			</div>
+
+			<div class="form-group">
+				<label for="diameterHigh">Diameter High:</label>
+				<input type="number" name="diameterHigh" th:field="*{diameterHigh}" />
+			</div>
+
+			<div class="form-group">
+				<label for="diameterLow">Diameter Low:</label>
+				<input type="number" name="diameterLow" th:field="*{diameterLow}" />
+			</div>
+
+			<div class="form-group">
+				<label for="dmgDrawingPath">DMG Drawing Path:</label>
+				<input type="text" name="dmgDrawingPath" th:field="*{dmgDrawingPath}" />
+			</div>
+
+			<div class="form-group">
+				<label for="drawingName">Drawing Name:</label>
+				<input type="text" name="drawingName" th:field="*{drawingName}" />
+			</div>
+
+			<div class="form-group">
+				<label for="faceLengthHigh">Face Length High:</label>
+				<input type="number" name="faceLengthHigh" th:field="*{faceLengthHigh}" />
+			</div>
+
+			<div class="form-group">
+				<label for="faceLengthLow">Face Length Low:</label>
+				<input type="number" name="faceLengthLow" th:field="*{faceLengthLow}" />
+			</div>
+
+			<div class="form-group">
+				<label for="newBasePrice">New Base Price:</label>
+				<input type="text" name="newBasePrice" th:field="*{newBasePrice}" />
+			</div>
+
+			<div class="form-group">
+				<label for="oem">OEM:</label>
+				<input type="text" name="oem" th:field="*{oem}" />
+			</div>
+
+			<div class="form-group">
+				<label for="originatingCustomer">Originating Customer:</label>
+				<input type="text" name="originatingCustomer" th:field="*{originatingCustomer}" />
+			</div>
+
+			<div class="form-group">
+				<label for="partNo">Part No.:</label>
+				<input type="text" name="partNo" th:field="*{partNo}" />
+			</div>
+
+			<div class="form-group">
+				<label for="pdfPath">PDF Path:</label>
+				<input type="text" name="pdfPath" th:field="*{pdfPath}" />
+			</div>
+
+			<div class="form-group">
+				<label for="prevPartNo">Previous Part No.:</label>
+				<input type="text" name="prevPartNo" th:field="*{prevPartNo}" />
+			</div>
+
+			<div class="form-group">
+				<label for="productCode">Product Code:</label>
+				<input type="text" name="productCode" th:field="*{productCode}" />
+			</div>
+
+			<div class="form-group">
+				<label for="revNumber">Revision Number:</label>
+				<input type="text" name="revNumber" th:field="*{revNumber}" />
+			</div>
+
+			<div class="form-group">
+				<label for="scannedPath">Scanned Path:</label>
+				<input type="text" name="scannedPath" th:field="*{scannedPath}" />
+			</div>
+
+			<div class="form-group">
+				<label for="steps">Steps:</label>
+				<input type="text" name="steps" th:field="*{steps}" />
+			</div>
+
+			<div class="form-group">
+				<label for="subcontractor">Subcontractor:</label>
+				<input type="text" name="subcontractor" th:field="*{subcontractor}" />
+			</div>
+
+			<div class="form-group">
+				<label for="type">Type:</label>
+				<input type="text" name="type" th:field="*{type}" />
+			</div>
+
+			<div class="form-group">
+				<label for="xlsmPath">XLSM Path:</label>
+				<input type="text" name="xlsmPath" th:field="*{xlsmPath}" />
+			</div>
+
+			<div class="form-group">
+				<label for="xlsxPath">XLSX Path:</label>
+				<input type="text" name="xlsxPath" th:field="*{xlsxPath}" />
+			</div>
+
+			<button type="submit">Submit</button>
+		</form>
+	</body>
+</html>

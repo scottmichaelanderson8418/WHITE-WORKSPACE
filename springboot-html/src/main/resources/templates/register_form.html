@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="ISO-8859-1" />
+	<title>Register Form</title>
+
+
+	<link rel="stylesheet" href="registerStyle.css" />
+
+</head>
+<style>
+	body {
+		display: block;
+		text-align: center;
+		position: relative;
+		margin-left: auto;
+		margin-right: auto;
+		font-size: large;
+		font-style: bold;
+		color: #04aa6d;
+		font-size: 15px;
+	}
+
+	
+	
+	
+	div.form-container {
+		background-color: white;
+		border:solid 5px  green;
+		border-radius: 15px;
+		color: green;
+		padding: 20px 35px;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 1.5rem;
+		margin: 20px;
+		box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.5);
+		max-width: 600px;
+		width:100%;
+		height: auto;
+		
+	}
+	
+	
+	 div.scottButton >button{
+		background-color: green;
+
+		border-radius: 15px;
+		color: white;
+		padding: 20px 35px;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 1.5rem;
+
+		margin: 20px;
+
+		max-width: 400px;
+		width:100%;
+		height: auto;
+		
+	}
+
+	
+	
+	
+	
+	.buttons>p>a {
+		background-color: #04aa6d;
+		/* Green */
+		border: none;
+		color: white;
+		padding: 20px 35px;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 1.5rem;
+		border-radius: 5px;
+		margin: 20px;
+
+		width: 400px;
+		height: auto;
+	}
+
+	.pagination {
+		display: inline-block;
+	}
+
+	.pagination a {
+		color: black;
+		float: left;
+		padding: 8px 16px;
+		text-decoration: none;
+	}
+	
+	div.form-container > form {
+		max-width: 800px;
+		margin: 0 auto;
+		padding: 20px;
+		color:green;
+		border: 0px solid #b92121;
+		box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+		-moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+		-webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+		-o-box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+		border-radius: 10px;
+		display: block;
+		background-color: #f5f5f5;
+	}
+
+	select {
+		width: 100%;
+		height: auto;
+		padding: 10px;
+		margin-bottom: 15px;
+		border: 5px solid #ccc;
+		border-radius: 3px;
+	}
+
+	/* Input fields */
+	input[type="text"],
+	input[type="password"],
+	input[type="email"] {
+		text-align: left;
+		width: 90%;
+		height: auto;
+		padding: 10px;
+		margin-bottom: 15px;
+		border: 5px solid #ccc;
+		border-radius: 3px;
+	}
+
+
+
+
+	/* Input fields */
+
+	input[type="date"] {
+		text-align: center;
+		width: 90%;
+		height: auto;
+		padding: 10px;
+		margin-bottom: 15px;
+		border: 5px solid #ccc;
+		border-radius: 3px;
+	}
+
+</style>
+
+<body>
+
+	<div class="form-container">
+		<h1>Enter User Credentials</h1>
+		<form action="/register" th:object="${user}" method="post">
+			<label for="firstname">First name :</label><br />
+			<input type="text" name="firstName" /> <br />
+
+			<label for="lastname">Last name :</label><br />
+			<input type="text" name="lastName" /> <br />
+
+			<label for="email">Email :</label><br />
+			<input type="text" name="email" /> <br />
+
+			<label for="dob">DOB :</label><br />
+			<input type="date" name="dob" /> <br />
+
+			<label for="password">Password :</label><br />
+			<input type="text" name="password" /> <br />
+
+			<label for="gender">Gender :</label><br />
+			<select name="gender">
+				<option value=""></option>
+				<option value="male">Male</option>
+				<option value="female">Female</option>
+			</select>
+			<br />
+
+			<div class="scottButton">
+			<button type="submit">Submit</button>
+			</div>
+		</form>
+
+	</div>
+</body>
+
+</html>

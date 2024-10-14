@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>List of Print Drawings</title>
+</head>
+<style>
+	body {
+	  font-family: sans-serif;
+	  margin: 20px;
+	}
+
+	.student-list-title {
+	  text-align: center;
+	  margin-bottom: 20px;
+	  font-size: 1.5em;
+	  color: #333;
+	}
+
+	.student-list-table {
+	  border-collapse: collapse;
+	  width: 100%;
+	}
+
+	th, td , tbody {
+	  padding: 10px;
+	  border: 2px solid #365930;
+	}
+
+	th {
+	  background-color: rgb(122, 236, 111);
+	  color: #333;
+	}
+</style>
+<body>
+    <h1>List of Print Drawings</h1>
+    <table border="1" class="student-list-table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Bearing Max</th>
+                <th>Bearing Min</th>
+                <th>Customer</th>
+                <th>Customer Pin</th>
+                <th>Customer Revision</th>
+                <th>Date</th>
+                <th>Date Created</th>
+                <th>Diameter High</th>
+                <th>Diameter Low</th>
+                <th>DMG Drawing Path</th>
+                <th>Drawing Name</th>
+                <th>Face Length High</th>
+                <th>Face Length Low</th>
+                <th>New Base Price</th>
+                <th>OEM</th>
+                <th>Originating Customer</th>
+                <th>Part No</th>
+                <th>PDF Path</th>
+                <th>Previous Part No</th>
+                <th>Product Code</th>
+                <th>Rev Number</th>
+                <th>Scanned Path</th>
+                <th>Steps</th>
+                <th>Subcontractor</th>
+                <th>Type</th>
+                <th>XLSM Path</th>
+                <th>XLSX Path</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="printDrawingDto : ${printDrawingDtos}">
+                <td th:text="${printDrawingDto.id}"></td>
+                <td th:text="${printDrawingDto.bearingMax}"></td>
+                <td th:text="${printDrawingDto.bearingMin}"></td>
+                <td th:text="${printDrawingDto.customer}"></td>
+                <td th:text="${printDrawingDto.customerPin}"></td>
+                <td th:text="${printDrawingDto.customerRevision}"></td>
+                <td th:text="${printDrawingDto.date}"></td>
+                <td th:text="${printDrawingDto.dateCreated}"></td>
+                <td th:text="${printDrawingDto.diameterHigh}"></td>
+                <td th:text="${printDrawingDto.diameterLow}"></td>
+                <td th:text="${printDrawingDto.dmgDrawingPath}"></td>
+                <td th:text="${printDrawingDto.drawingName}"></td>
+                <td th:text="${printDrawingDto.faceLengthHigh}"></td>
+                <td th:text="${printDrawingDto.faceLengthLow}"></td>
+                <td th:text="${printDrawingDto.newBasePrice}"></td>
+                <td th:text="${printDrawingDto.oem}"></td>
+                <td th:text="${printDrawingDto.originatingCustomer}"></td>
+                <td th:text="${printDrawingDto.partNo}"></td>
+                <td th:text="${printDrawingDto.pdfPath}"></td>
+                <td th:text="${printDrawingDto.prevPartNo}"></td>
+                <td th:text="${printDrawingDto.productCode}"></td>
+                <td th:text="${printDrawingDto.revNumber}"></td>
+                <td th:text="${printDrawingDto.scannedPath}"></td>
+                <td th:text="${printDrawingDto.steps}"></td>
+                <td th:text="${printDrawingDto.subcontractor}"></td>
+                <td th:text="${printDrawingDto.type}"></td>
+                <td th:text="${printDrawingDto.xlsmPath}"></td>
+                <td th:text="${printDrawingDto.xlsxPath}"></td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

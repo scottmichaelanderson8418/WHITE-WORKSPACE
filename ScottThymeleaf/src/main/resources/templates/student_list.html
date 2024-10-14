@@ -1,0 +1,80 @@
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>List of Students</title>
+</head>
+<style>
+	body {
+	  font-family: sans-serif; /* Use a generic sans-serif font for a clean look */
+	  margin: 20px; /* Add some margin around the page content */
+
+	}
+
+	.student-list-title {
+	  text-align: center; /* Center the title */
+	  margin-bottom: 20px; /* Add some space below the title */
+	  font-size: 1.5em;  /* Increase title font size slightly */
+	  color: #333; /* Set title text color */
+	}
+
+	.student-list-table {
+	  border-collapse: collapse; /* Remove default table border spacing */
+	  width: 100%; /* Make the table fill the available width */
+	}
+
+	th, td , tbody{
+	  padding: 10px;  /* Add padding to table cells for better readability */
+border: 2px solid #365930;
+	}
+
+	th {
+	  background-color: rgb(122, 236, 111); /* Set a light background color for table headers */
+	  color: #333; /* Set header text color */
+	}
+
+
+	.buttons >p>a{
+		background-color: #04aa6d;
+		/* Green */
+		border: none;
+		color: white;
+		padding:20px 35px;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 1.5rem;
+		border-radius: 5px;
+		margin: 20px;
+		}
+
+</style>
+<body>
+    <h1>List of Students</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+				<th>Age</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="student : ${students}">
+                <td th:text="${student.id}"></td>
+                <td th:text="${student.firstName}"></td>
+                <td th:text="${student.lastName}"></td>   
+				<td th:text="${student.age}"></td>   
+            </tr>
+        </tbody>
+    </table>   
+	<div class="button">
+		
+	<p>	<a th:href="@{/create-student}">Create New Student</a></p>
+	</div>
+
+
+</body>
+
+</html>
