@@ -1,0 +1,23 @@
+sudo: required  # (Or false if sudo is not needed)
+
+language: java
+jdk: openjdk17
+
+before_install: chmod +x mvnw
+
+script: ./mvnw clean install
+
+  
+deploy:
+ provider: elasticbeanstalk
+ skip_cleanup: true #every time travis cleans up the jar files are deleted
+ region: us-east-2
+ app: PrintDrawingSearchAPI
+ env: PrintDrawingSearchAPI-env
+ zip_file: "target/PrintDrawingSearchAPI-0.0.1-SNAPSHOT"
+ bucket_name: printdrawingsearchapi
+ bucket_path: PrintDrawingSearchAPI
+ on:
+  branch: main
+  access_key_id: $AWS_ACCESS_KEY_ID
+  secret_access_key: $AWS_SECRET_ACCESS_KEY

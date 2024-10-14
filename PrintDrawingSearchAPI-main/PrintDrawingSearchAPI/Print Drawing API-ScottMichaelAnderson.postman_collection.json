@@ -1,0 +1,337 @@
+{
+	"info": {
+		"_postman_id": "f1330103-054d-4cb1-87c2-2c567f632cfd",
+		"name": "Print Drawing API-ScottMichaelAnderson",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "15945894"
+	},
+	"item": [
+		{
+			"name": "GET ALL PRINTS",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/print?pageNo=0&pageSize=10",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"print"
+					],
+					"query": [
+						{
+							"key": "pageNo",
+							"value": "0"
+						},
+						{
+							"key": "pageSize",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "FIND BY DIAMETER AND FACELENGTH",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/pagination/0/10?sortField=diameterLow&diameterMinValue=7.1&diameterMaxValue=7.2&faceLengthMinValue=40&faceLengthMaxValue=50",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"pagination",
+						"0",
+						"10"
+					],
+					"query": [
+						{
+							"key": "sortField",
+							"value": "diameterLow"
+						},
+						{
+							"key": "diameterMinValue",
+							"value": "7.1"
+						},
+						{
+							"key": "diameterMaxValue",
+							"value": "7.2"
+						},
+						{
+							"key": "faceLengthMinValue",
+							"value": "40"
+						},
+						{
+							"key": "faceLengthMaxValue",
+							"value": "50"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UPDATE PRINT BY ID",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "",
+						"value": ""
+					},
+					{
+						"key": "Accept",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"bearingMax\": \"value_bearingMax\",\r\n    \"bearingMin\": \"value_bearingMin\",\r\n    \"cust\": \"value_cust\",\r\n    \"custPin\": \"value_custPin\",\r\n    \"custRev\": \"value_custRev\",\r\n    \"date\": \"value_date\",\r\n    \"dateCreated\": \"value_dateCreated\",\r\n    \"dia1\": \"value_dia1\",\r\n    \"dia2\": \"value_dia2\",\r\n    \"dmgDrawingPath\": \"value_dmgDrawingPath\",\r\n    \"drawingName\": \"value_drawingName\",\r\n    \"face1\": \"value_face1\",\r\n    \"face2\": \"value_face2\",\r\n    \"id\": 123,\r\n    \"newBasePrice\": \"value_newBasePrice\",\r\n    \"oem\": \"value_oem\",\r\n    \"originatingCustomer\": \"value_originatingCustomer\",\r\n    \"partNo\": \"value_partNo\",\r\n    \"pdfPath\": \"value_pdfPath\",\r\n    \"prevPartNo\": \"value_prevPartNo\",\r\n    \"productCode\": \"value_productCode\",\r\n    \"revNumber\": \"value_revNumber\",\r\n    \"scannedPath\": \"value_scannedPath\",\r\n    \"steps\": \"value_steps\",\r\n    \"subcontractor\": \"value_subcontractor\",\r\n    \"type\": \"value_type\",\r\n    \"xlsmPath\": \"value_xlsmPath\",\r\n    \"xlsxPath\": \"value_xlsxPath\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/print/update/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"print",
+						"update",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET PRINT BY ID",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/print/10",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"print",
+						"10"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UPDATE PRINT BY ID",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\r\n\"drawingName\":\"zzzz\",\r\n    \"dia1\": \"9.699\",\r\n    \"dia2\" : \"44.444\",\r\n    \"face2\": \"999977777779\",\r\n    \"face1\":\"66666\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/print/update/10",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"print",
+						"update",
+						"10"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE PRINT BY ID",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\r\n\r\n\"name\":\"Scott Pokesdadasdasdmon\",\r\n\"type\": \"earth type\"\r\n\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/print/delete/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"print",
+						"delete",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CREATE NEW PRINT",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"bearingMax\": \"value_bearingMax\",\r\n    \"bearingMin\": \"value_bearingMin\",\r\n    \"cust\": \"value_cust\",\r\n    \"custPin\": \"value_custPin\",\r\n    \"custRev\": \"value_custRev\",\r\n    \"date\": \"value_date\",\r\n    \"dateCreated\": \"value_dateCreated\",\r\n    \"dia1\": \"value_dia1\",\r\n    \"dia2\": \"value_dia2\",\r\n     \"drawingName\": \"value_drawingName\",\r\n    \"dmgDrawingPath\": \"value_dmgDrawingPath\",\r\n    \"face1\": \"value_face1\",\r\n    \"face2\": \"value_face2\",\r\n    \"newBasePrice\": \"value_newBasePrice\",\r\n    \"oem\": \"value_oem\",\r\n    \"originatingCustomer\": \"value_originatingCustomer\",\r\n    \"partNo\": \"value_partNo\",\r\n    \"pdfPath\": \"value_pdfPath\",\r\n    \"prevPartNo\": \"value_prevPartNo\",\r\n    \"productCode\": \"value_productCode\",\r\n    \"revNumber\": \"value_revNumber\",\r\n    \"scannedPath\": \"value_scannedPath\",\r\n    \"steps\": \"value_steps\",\r\n    \"subcontractor\": \"value_subcontractor\",\r\n    \"type\": \"value_type\",\r\n    \"xlsmPath\": \"value_xlsmPath\",\r\n    \"xlsxPath\": \"value_xlsxPath\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/print/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"print",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "REGISTER USER",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\n\n    \"username\": \"ScottMichaelAnderson8418@gmail.com\",\n    \"password\": \"123\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/register/user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"register",
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AUTHENTICATION",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\n\n    \"username\": \"PHATMOMMA\",\n    \"password\": \"1234\"\n    \n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/authenticate",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"authenticate"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
